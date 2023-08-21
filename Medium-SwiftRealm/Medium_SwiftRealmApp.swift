@@ -11,7 +11,7 @@ import SwiftUI
 struct Medium_SwiftRealmApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RegisterView()
         }
     }
 }
