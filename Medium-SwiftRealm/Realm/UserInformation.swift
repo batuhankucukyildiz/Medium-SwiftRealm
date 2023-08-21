@@ -13,4 +13,5 @@ class UserInformation : Object , ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id : ObjectId
     @Persisted var email : String = ""
     @Persisted var password : String = ""
+
 }
