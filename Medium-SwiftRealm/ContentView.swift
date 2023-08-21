@@ -10,8 +10,6 @@ import SwiftUI
 struct RegisterView: View {
     @State var email  = ""
     @State var password  = ""
-    let icons : [String] = ["facebook" ,"google" , "twitter"]
-
     var body: some View {
         VStack{
             HStack{
@@ -57,20 +55,6 @@ struct RegisterView: View {
             
             }.padding(.horizontal ,25)
                 .padding(.top ,20)
-            
-            HStack(spacing: 30){
-                ForEach(icons, id: \.self){ icon in
-                    Button(action : {}) {
-                        Image(icon).renderingMode(.template)
-                            .resizable()
-                            .frame(width: 25 , height: 25)
-                            .foregroundColor(Color(icon == "google" ? "Color1" : "Color"))
-                    }.padding(.horizontal, 20)
-                        .padding(.vertical , 30)
-                }
-                
-            }
-            
         }
         
     }
