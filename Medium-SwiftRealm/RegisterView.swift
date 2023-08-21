@@ -14,7 +14,7 @@ struct RegisterView: View {
     var body: some View {
         VStack{
             HStack{
-                Text("Hesap Oluştur").font(.title)
+                Text("Hesap Oluştur 🥳 ").font(.title)
                     .fontWeight(.bold)
                 Spacer()
                 
@@ -43,8 +43,11 @@ struct RegisterView: View {
                 .padding(.top , 25)
             
             Button(action: {
-                realm.addUser(email: email, password: password)
-                realm.getUser()
+                if(email.count != 0 && password.count != 0) {
+                    realm.addUser(email: email, password: password)
+                    realm.getUser()
+                }
+               
             }){
                 Text("Kayıt Ol")
                     .font(.system(size:20))
