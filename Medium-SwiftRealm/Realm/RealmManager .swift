@@ -79,15 +79,15 @@ class RealmManager : ObservableObject{
 
         if let localRealm = localRealm {
             do {
-                let taskToDelete = localRealm.objects(UserInformation.self).filter(NSPredicate(format: "id == %@", id))
-                guard !taskToDelete.isEmpty else { return }
+                let userDelete = localRealm.objects(UserInformation.self).filter(NSPredicate(format: "id == %@", id))
+                guard !userDelete.isEmpty else { return }
                 try localRealm.write {
-                localRealm.delete(taskToDelete)
+                localRealm.delete(userDelete)
                 print("Deleted user with id \(id)")
                 }
             }
             catch let error{
-                print("Error deleting task \(id) to Realm: \(error)")
+                print("Error deleting user \(id) to Realm: \(error)")
                 }
             }
         }
