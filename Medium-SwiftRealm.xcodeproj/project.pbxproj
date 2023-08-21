@@ -16,6 +16,8 @@
 		4568343C2A93F0E60046D904 /* Medium_SwiftRealmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568343B2A93F0E60046D904 /* Medium_SwiftRealmUITestsLaunchTests.swift */; };
 		4568344A2A93F2470046D904 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 456834492A93F2470046D904 /* Realm */; };
 		4568344C2A93F2470046D904 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4568344B2A93F2470046D904 /* RealmSwift */; };
+		4568344F2A93F49F0046D904 /* RealmManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568344E2A93F49F0046D904 /* RealmManager .swift */; };
+		456834512A93F4DD0046D904 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456834502A93F4DD0046D904 /* UserInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		456834352A93F0E50046D904 /* Medium-SwiftRealmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Medium-SwiftRealmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		456834392A93F0E50046D904 /* Medium_SwiftRealmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medium_SwiftRealmUITests.swift; sourceTree = "<group>"; };
 		4568343B2A93F0E60046D904 /* Medium_SwiftRealmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medium_SwiftRealmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4568344E2A93F49F0046D904 /* RealmManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmManager .swift"; sourceTree = "<group>"; };
+		456834502A93F4DD0046D904 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		4568341D2A93F0E40046D904 /* Medium-SwiftRealm */ = {
 			isa = PBXGroup;
 			children = (
+				4568344D2A93F48F0046D904 /* Realm */,
 				4568341E2A93F0E40046D904 /* Medium_SwiftRealmApp.swift */,
 				456834202A93F0E40046D904 /* ContentView.swift */,
 				456834222A93F0E50046D904 /* Assets.xcassets */,
@@ -129,6 +134,15 @@
 				4568343B2A93F0E60046D904 /* Medium_SwiftRealmUITestsLaunchTests.swift */,
 			);
 			path = "Medium-SwiftRealmUITests";
+			sourceTree = "<group>";
+		};
+		4568344D2A93F48F0046D904 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				4568344E2A93F49F0046D904 /* RealmManager .swift */,
+				456834502A93F4DD0046D904 /* UserInformation.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				456834212A93F0E40046D904 /* ContentView.swift in Sources */,
+				456834512A93F4DD0046D904 /* UserInformation.swift in Sources */,
+				4568344F2A93F49F0046D904 /* RealmManager .swift in Sources */,
 				4568341F2A93F0E40046D904 /* Medium_SwiftRealmApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
