@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @StateObject var realm = RealmManager()
     @State var email  = ""
     @State var password  = ""
     var body: some View {
@@ -41,7 +42,10 @@ struct RegisterView: View {
             }.padding(.horizontal , 25)
                 .padding(.top , 25)
             
-            Button(action: {}){
+            Button(action: {
+                realm.addUser(email: email, password: password)
+                realm.getUser()
+            }){
                 Text("Kayıt Ol")
                     .font(.system(size:20))
                     .foregroundColor(.white)

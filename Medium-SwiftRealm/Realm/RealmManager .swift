@@ -10,9 +10,12 @@ import RealmSwift
 
 
 
-class RealmManager{
+class RealmManager : ObservableObject{
     private(set) var localRealm : Realm?
-    init(){}
+    @Published private(set) var user : [UserInformation] = []
+    init(){
+        initiliazeRealmManager()
+    }
     
     func initiliazeRealmManager() {
         do{
@@ -30,7 +33,8 @@ class RealmManager{
         if let localRealm = localRealm {
             do {
                 try localRealm.write{
-                    let newUser = UserInformation(value: ["enail" : email , "password" : password])
+                    let newUser = UserInformation(value: ["email" : email , "password" : password])
+                    localRealm.add(newUser)
                     print("Added new user -> \(newUser) ")
                 }
             }
@@ -39,6 +43,54 @@ class RealmManager{
             }
         }
     }
+    
+    func getUser(){
+        if let localRealm = localRealm {
+            let userInformation = localRealm.objects(UserInformation.self)
+            print(userInformation)
+            user = []
+            user.forEach{item in
+                user.append(item)
+            }
+            print(user)
+        }
+    }
+    
+    func updateUser(id: ObjectId, newPassword: String) {
+            if let localRealm = localRealm {
+                do {
+                    let password = localRealm.objects(UserInformation.self).filter(NSPredicate(format: "id == %@", id))
+                    guard let passwordUpdate = password.first else { return }
+                    try localRealm.write {
+                        passwordUpdate.password = newPassword
+                        print("Updated password with id \(id)")
+                    }
+
+                } catch {
+                    print("Error updating password \(id)")
+
+                }
+
+            }
+
+        }
+
+    func deleteUser(id: ObjectId) {
+
+        if let localRealm = localRealm {
+            do {
+                let taskToDelete = localRealm.objects(UserInformation.self).filter(NSPredicate(format: "id == %@", id))
+                guard !taskToDelete.isEmpty else { return }
+                try localRealm.write {
+                localRealm.delete(taskToDelete)
+                print("Deleted user with id \(id)")
+                }
+            }
+            catch let error{
+                print("Error deleting task \(id) to Realm: \(error)")
+                }
+            }
+        }
 }
 
 

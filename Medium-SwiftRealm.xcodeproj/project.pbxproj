@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4568341F2A93F0E40046D904 /* Medium_SwiftRealmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568341E2A93F0E40046D904 /* Medium_SwiftRealmApp.swift */; };
-		456834212A93F0E40046D904 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456834202A93F0E40046D904 /* ContentView.swift */; };
+		456834212A93F0E40046D904 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456834202A93F0E40046D904 /* RegisterView.swift */; };
 		456834232A93F0E50046D904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456834222A93F0E50046D904 /* Assets.xcassets */; };
 		456834262A93F0E50046D904 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456834252A93F0E50046D904 /* Preview Assets.xcassets */; };
 		456834302A93F0E50046D904 /* Medium_SwiftRealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4568342F2A93F0E50046D904 /* Medium_SwiftRealmTests.swift */; };
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		4568341B2A93F0E40046D904 /* Medium-SwiftRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Medium-SwiftRealm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4568341E2A93F0E40046D904 /* Medium_SwiftRealmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medium_SwiftRealmApp.swift; sourceTree = "<group>"; };
-		456834202A93F0E40046D904 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		456834202A93F0E40046D904 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		456834222A93F0E50046D904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		456834252A93F0E50046D904 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4568342B2A93F0E50046D904 /* Medium-SwiftRealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Medium-SwiftRealmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				4568344D2A93F48F0046D904 /* Realm */,
+				456834202A93F0E40046D904 /* RegisterView.swift */,
 				4568341E2A93F0E40046D904 /* Medium_SwiftRealmApp.swift */,
-				456834202A93F0E40046D904 /* ContentView.swift */,
 				456834222A93F0E50046D904 /* Assets.xcassets */,
 				456834242A93F0E50046D904 /* Preview Content */,
 			);
@@ -282,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456834212A93F0E40046D904 /* ContentView.swift in Sources */,
+				456834212A93F0E40046D904 /* RegisterView.swift in Sources */,
 				456834512A93F4DD0046D904 /* UserInformation.swift in Sources */,
 				4568344F2A93F49F0046D904 /* RealmManager .swift in Sources */,
 				4568341F2A93F0E40046D904 /* Medium_SwiftRealmApp.swift in Sources */,
